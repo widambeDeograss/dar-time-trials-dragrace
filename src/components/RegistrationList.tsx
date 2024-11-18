@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useDownloadExcel } from 'react-export-table-to-excel';
 
 interface Registration {
@@ -56,10 +56,10 @@ const RegistrationList = () => {
 
   // Calculate statistics
   const totalRegistrations = registrations.length;
-  const uniqueTeams = new Set(registrations.map(reg => reg.racingTeamName)).size;
-  const averageHP = registrations.length > 0 
-    ? Math.round(registrations.reduce((acc, reg) => acc + Number(reg.estimatedHP || 0), 0) / registrations.length)
-    : 0;
+  // const uniqueTeams = new Set(registrations.map(reg => reg.racingTeamName)).size;
+  // const averageHP = registrations.length > 0 
+  //   ? Math.round(registrations.reduce((acc, reg) => acc + Number(reg.estimatedHP || 0), 0) / registrations.length)
+  //   : 0;
 
   // Format date for display
   const formatDate = (dateString: string) => {
