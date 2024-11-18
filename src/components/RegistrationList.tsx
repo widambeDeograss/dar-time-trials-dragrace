@@ -44,7 +44,7 @@ const RegistrationList = () => {
   const fetchRegistrations = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/registrations');
+      const response = await fetch('https://dar-race-express-server-k3852yzqg.vercel.app/api/registrations');
       const data = await response.json();
       setRegistrations(data);
     } catch (error) {

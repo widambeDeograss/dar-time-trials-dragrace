@@ -75,7 +75,7 @@ const RegistrationForm = () => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:5000/api/register", {
+      const response = await fetch("https://dar-race-express-server-k3852yzqg.vercel.app/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

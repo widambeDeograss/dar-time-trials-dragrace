@@ -33,7 +33,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<RegistrationForm />} />
-          <Route path="/registrations" element={<RegistrationList />} />
+          <Route path="/app/registrations" element={<RegistrationList />} />
         </Routes>
       </div>
     </Router>
