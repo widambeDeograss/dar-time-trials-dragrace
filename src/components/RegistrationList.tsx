@@ -44,7 +44,13 @@ const RegistrationList = () => {
   const fetchRegistrations = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://143.198.212.191:5000/api/registrations');
+      const response = await await fetch('http://143.198.212.191:5000/api/registrations', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        mode: 'no-cors'
+      });
       const data = await response.json();
       setRegistrations(data);
     } catch (error) {
